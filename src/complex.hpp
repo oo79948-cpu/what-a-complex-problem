@@ -15,5 +15,3 @@ public:
     float imaginary () const;
     std::string prettyPrint() const;
 };
-
-std::string complex();

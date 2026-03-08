@@ -52,4 +52,3 @@ std::string ComplexNumber::prettyPrint() const {
    out << "i";
    return out.str();
 }
-
