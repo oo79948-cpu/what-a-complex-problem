@@ -1,8 +1,8 @@
 #include "complex.hpp"
 #include <cmath>
-#include <iostream>
+#include <iomanip>
 #include <string>
-#include <format>
+#include<sstream>
 
 ComplexNumber::ComplexNumber(float realPart, float imaginaryPart) {
    this->realPart = realPart;
@@ -40,6 +40,16 @@ float ComplexNumber::imaginary () const {
    return imaginaryPart;
 }
 
+// std::string ComplexNumber::prettyPrint() const {
+//  return std::format("{:.1f}", realPart)  + " + " + std::format("{:.1f}", imaginaryPart) + "i";
+// }
+
 std::string ComplexNumber::prettyPrint() const {
- return std::format("{:.1f}", realPart)  + " + " + std::format("{:.1f}", imaginaryPart) + "i";
+   std::ostringstream out;
+   out << std::fixed <<std::setprecision(1) << realPart;
+   out << " + ";
+   out << std::fixed << std::setprecision(1) << imaginaryPart;
+   out << "i";
+   return out.str();
 }
+
