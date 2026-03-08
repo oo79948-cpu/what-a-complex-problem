@@ -2,7 +2,7 @@
 #include <cmath>
 #include <iomanip>
 #include <string>
-#include<sstream>
+#include <sstream>
 
 ComplexNumber::ComplexNumber(float realPart, float imaginaryPart) {
    this->realPart = realPart;
