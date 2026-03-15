@@ -36,8 +36,13 @@ ComplexNumber ComplexNumber::conjugate () const {
 float ComplexNumber::real () const {
    return realPart;
 }
+
 float ComplexNumber::imaginary () const {
    return imaginaryPart;
+}
+
+float ComplexNumber::phase () const {
+   return std::atan2 (imaginaryPart, realPart);
 }
 
 // std::string ComplexNumber::prettyPrint() const {

@@ -13,5 +13,6 @@ public:
     ComplexNumber conjugate () const;
     float real () const;
     float imaginary () const;
+    float phase () const;
     std::string prettyPrint() const;
 };

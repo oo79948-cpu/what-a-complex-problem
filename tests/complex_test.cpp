@@ -59,3 +59,18 @@ TEST_CASE( "print returns the value of the complex number" ) {
     ComplexNumber complex1 = ComplexNumber(-3.3, 2.7);
     REQUIRE( complex1.prettyPrint() == "-3.3 + 2.7i" );
 }
+
+TEST_CASE( "print returns the phase of the complex number" ) {
+    ComplexNumber complex1 = ComplexNumber(3, 4);
+    REQUIRE( complex1.phase() == 0.927295208f );
+}
+
+TEST_CASE( "print returns the phase of the complex number with the real part being 0" ) {
+    ComplexNumber complex1 = ComplexNumber(0, 4);
+    REQUIRE( complex1.phase() == 1.570796371f );
+}
+
+TEST_CASE( "print returns the phase of the complex number with the imaginary part being 0" ) {
+    ComplexNumber complex1 = ComplexNumber(3, 0);
+    REQUIRE( complex1.phase() == 0 );
+}
